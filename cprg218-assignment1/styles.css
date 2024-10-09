@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+}
+/* default CSS is styled for less than or equal to 768px */
+
+.header-container{
+display:flex;
+flex-direction: column;
+background-color: #120323;
+color: #97bf04;
+height: 160px;
+align-items: center;
+font-family: sans-serif;
+font-size: 10px;
+}
+/* Set background colour, header height, flex direction, font family, font color, logo size */
+/* Set alignment */
+
+header img{
+    width: 100px;
+    padding-top: 10px;
+}
+/* header img must be styled separately */
+
+#container{
+    display:flex;
+    flex-direction: column;
+    flex-basis: fit-content;
+    font-family: sans-serif;
+    padding-bottom: 10px;
+    }
+/* this contains the aside, main, figure, and figcaption as column flexbox, this is the master */
+/* all items inside this container must be styled, aligned, and flexed individually below */
+
+h2{
+    color:#120323;
+}
+/* set animal name text color to same as background */
+
+main figure img{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 3px solid;
+    border-color: #d9043d;
+}
+/* this main puffin image must be styled separately */
+
+main{
+    background-color: white;
+}
+/* sets background colour of only the main section to white  */
+
+figure{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    font-family: sans-serif;
+}
+/* places the puffin image in the column */
+
+aside{
+    background-color:#97bf04;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/* sets the background colour of the aside */
+
+footer{
+display:flex;
+background-color: #d9043d;
+align-items: flex-end;
+justify-content: center;
+font-family: sans-serif;
+color: white;
+font-size: 3 px;
+}
+/* all styling for the footer, this will stay constant.*/
+
+small{
+    display: flex;
+    font-size: 10px;
+    color: white;
+    font-family: sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+/* styling for footer text */
+
+/* ----------------------------------------------------------------------------- */
+/* Responsive styles */
+/* over <768px> */
+@media screen and (min-width:769px){
+    .header-container{
+        display:flex;
+        flex-direction: row;
+        height: 140px;
+        font-size: 12px;
+        justify-content: center;
+        }
+/* places the logo and title text in a row */
+
+    header img{
+            width: auto;
+            height: 95%;
+            margin: 10px;
+            padding: 10px;
+    }
+/* sets the logo size and margins, padding */
+
+    figure {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start; 
+        /* aligns the image and figcaption along the top */
+    }
+
+    main figure img {
+        max-width: 30%;
+        margin-right: 20px; 
+        margin-top: 20px;
+    }
+/* size and margin of the figure image between figcaption */
+
+    figcaption {
+        max-width: auto;
+    }
+    }
+/* set figcaption to auto to prevent overflow */
+
+/* ----------------------------------------------------------------------------- */
+/* over 1000px*/
+  @media screen and (min-width:1001px){
+
+    .header-container{
+        display:flex;
+        flex-direction: row;
+        height: 160px;
+        font-size: 15px;
+        justify-content: center;
+        }
+        /* adjust header and font size */
+
+    header img{
+        width: auto;
+        height: 90%;
+        margin: 20px;
+        padding: 10px;
+    }
+/* adjust logo size and margin/padding */
+
+    #container{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+/* this aligns all items in the container class into a row for the widest resolution */
+
+    aside{
+        margin-top: 35px;
+        max-width: 25%;
+    }
+/* sets the margin and the appropriate width for varying screen sizes above 1000px */
+
+    }
+
